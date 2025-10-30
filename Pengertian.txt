@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Proyek: Kalkulator Kuantum</title>
+    <!-- Memuat Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Menggunakan font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style untuk menampung kelas 'prose' untuk format teks yang baik */
+        .prose h2 {
+            font-size: 1.5rem; /* 24px */
+            line-height: 2rem; /* 32px */
+            font-weight: 600;
+            margin-top: 2.5rem; /* 40px */
+            margin-bottom: 1rem; /* 16px */
+            border-bottom: 1px solid #e5e7eb; /* cool-gray-200 */
+            padding-bottom: 0.5rem; /* 8px */
+        }
+        .prose h3 {
+            font-size: 1.25rem; /* 20px */
+            line-height: 1.75rem; /* 28px */
+            font-weight: 600;
+            margin-top: 2rem; /* 32px */
+            margin-bottom: 0.75rem; /* 12px */
+        }
+        .prose p, .prose li {
+            font-size: 1rem; /* 16px */
+            line-height: 1.75rem; /* 28px */
+            color: #374151; /* cool-gray-700 */
+        }
+        .prose ul {
+            list-style-type: disc;
+            padding-left: 1.5rem; /* 24px */
+            margin-top: 1rem; /* 16px */
+            margin-bottom: 1rem; /* 16px */
+        }
+        .prose strong {
+            font-weight: 600;
+            color: #111827; /* cool-gray-900 */
+        }
+        /* Custom card style */
+        .info-card {
+            background-color: white;
+            border-radius: 0.75rem; /* 12px */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem; /* 24px */
+            margin-bottom: 1.5rem; /* 24px */
+            transition: all 0.3s ease-in-out;
+        }
+        .info-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #4f46e5; /* Indigo-600 */
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem; /* 12px 24px */
+            border-radius: 0.5rem; /* 8px */
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #4338ca; /* Indigo-700 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-indigo-600">
+                ⚛ Proyek Kalkulator Kuantum
+            </div>
+            <div>
+                <a href="https://banar-boop.github.io/Kalkulator-Kuantum/" target="_blank" rel="noopener noreferrer" class="cta-button">
+                    Buka Kalkulator
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        
+        <!-- Judul Utama -->
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-12">
+            PROJECT FISIKA KUANTUM: KALKULATOR KUANTUM
+        </h1>
+
+        <!-- Latar Belakang & Tujuan -->
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <!-- Latar Belakang -->
+            <div class="info-card prose max-w-none">
+                <h2>Latar Belakang Masalah</h2>
+                <p>
+                    Fisika kuantum, dengan konsep intinya seperti <strong>kuantisasi energi</strong> dan <strong>probabilitas gelombang-partikel</strong>, seringkali sulit dipahami hanya melalui teori dan persamaan abstrak. Masalah fundamental seperti <strong>potensial tangga</strong> dan <strong>potensial kotak (penghalang)</strong> sangat penting untuk memahami fenomena inti seperti refleksi, transmisi, dan <strong>efek terowongan kuantum (quantum tunneling)</strong>.
+                </p>
+                <p>
+                    Perhitungan manual yang panjang dan banyaknya formula yang harus dihafal menjadi hambatan bagi mahasiswa untuk memahami materi ini secara mendalam. Oleh karena itu, dibutuhkan sebuah perangkat yang dapat melakukan perhitungan dengan cepat dan akurat untuk mempermudah analisis dan pemahaman fenomena kuantum.
+                </p>
+            </div>
+
+            <!-- Tujuan Project -->
+            <div class="info-card prose max-w-none bg-indigo-50">
+                <h2>Tujuan Project</h2>
+                <p>Berdasarkan latar belakang tersebut, project ini memiliki tujuan:</p>
+                <ul>
+                    <li><strong>Mempermudah</strong> perhitungan probabilitas partikel yang direfleksikan atau ditransmisikan dalam skenario potensial tangga dan potensial kotak.</li>
+                    <li><strong>Meningkatkan akurasi</strong> perhitungan dibandingkan dengan perhitungan manual yang rentan kesalahan.</li>
+                    <li><strong>Menyediakan media</strong> yang dapat diakses oleh siapa saja untuk mempermudah pemahaman konsep terkait potensial sumur dan kotak dalam fisika kuantum.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Studi Literatur / Teori Dasar -->
+        <div class="info-card prose max-w-5xl mx-auto">
+            <h2>Studi Literatur & Teori Dasar Kalkulator</h2>
+            
+            <p>
+                Kalkulator ini didasarkan pada solusi Persamaan Schrödinger untuk dua skenario potensial dasar:
+            </p>
+
+            <!-- 1. Potensial Tangga -->
+            <h3>1. Potensial Tangga (Potential Step)</h3>
+            <p>
+                Potensial ini memodelkan perubahan energi potensial ($U_0$) yang tiba-tiba pada satu titik.
+            </p>
+            <ul>
+                <li>
+                    <strong>Fisika Klasik:</strong> Jika energi partikel $E < U_0$, partikel akan <strong>sepenuhnya dipantulkan</strong> (refleksi = 100%). Jika $E > U_0$, partikel akan <strong>sepenuhnya ditransmisikan</strong> (transmisi = 100%).
+                </li>
+                <li>
+                    <strong>Mekanika Kuantum:</strong>
+                    <ul>
+                        <li>
+                            <strong>Kasus $E < U_0$:</strong> Meskipun partikel pada akhirnya terpantul sepenuhnya, fungsi gelombangnya meluruh secara eksponensial di dalam daerah potensial. Ini menunjukkan adanya probabilitas kecil namun tidak nol untuk menemukan partikel di wilayah yang secara klasik dilarang (<em>classically forbidden region</em>).
+                        </li>
+                        <li>
+                            <strong>Kasus $E > U_0$:</strong> Partikel mengalami <strong>refleksi parsial kuantum</strong>. Artinya, ada probabilitas partikel akan dipantulkan dan probabilitas partikel akan ditransmisikan. Fenomena ini tidak memiliki analogi dalam fisika klasik dan terjadi karena perubahan mendadak pada panjang gelombang de Broglie partikel.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- 2. Potensial Kotak -->
+            <h3>2. Potensial Kotak (Square Potential Well/Barrier)</h3>
+            <p>
+                Model ini membatasi partikel pada wilayah ruang tertentu oleh dinding potensial. Ini adalah model dasar untuk memahami <strong>kuantisasi energi</strong>.
+            </p>
+            
+            <h4>Tipe Sumur Potensial:</h4>
+            <ul>
+                <li>
+                    <strong>Sumur Tak Hingga (Infinite Square Well):</strong> Model ideal dengan dinding potensial tak terhingga. Kondisi ini secara otomatis memaksa <strong>energi menjadi terkuantisasi</strong> (hanya bisa memiliki nilai-nilai diskret tertentu). Model ini juga memprediksi <strong>energi keadaan dasar (ground state energy)</strong> yang non-nol, sesuai dengan Prinsip Ketidakpastian Heisenberg.
+                </li>
+                <li>
+                    <strong>Sumur Hingga (Finite Square Well):</strong> Model yang lebih realistis dengan tinggi potensial terbatas.
+                    <ul>
+                        <li>Untuk partikel terikat, energi juga terkuantisasi.</li>
+                        <li>Keunikan model ini adalah fungsi gelombang tidak menjadi nol di luar sumur, yang menunjukkan probabilitas <em>finite</em> untuk menemukan partikel di luar batas potensial. Ini adalah manifestasi dari <strong>efek terowongan kuantum (quantum tunneling)</strong>.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Call to Action Bawah -->
+        <div class="text-center mt-12">
+            <a href="https://banar-boop.github.io/Kalkulator-Kuantum/" target="_blank" rel="noopener noreferrer" class="cta-button text-lg">
+                🚀 Coba Kalkulator Kuantum Sekarang!
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 mt-16 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Proyek Fisika Kuantum. Didasarkan pada dokumen proposal.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
