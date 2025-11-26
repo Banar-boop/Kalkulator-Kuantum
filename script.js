@@ -1,13 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // === Konstanta Fisika (dalam satuan SI) ===
+  
     const hbar = 1.054571817e-34; // J.s
     const electronMass = 9.1093837e-31; // kg
     
-    // === Faktor Konversi ===
     const eV_to_Joule = 1.60218e-19; // 1 eV = 1.602... x 10^-19 J
     const Angstrom_to_Meter = 1e-10; // 1 Å = 10^-10 m
 
-    // === Elemen-elemen HTML ===
+
     const form = document.getElementById('calculatorForm');
     const potentialTypeSelect = document.getElementById('potentialType');
     const widthInputContainer = document.getElementById('widthInputContainer');
@@ -16,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const transmissionResultSpan = document.getElementById('transmissionResult');
     const noteP = document.getElementById('note');
 
-    // === Event Listener untuk mengubah tampilan form ===
+
     potentialTypeSelect.addEventListener('change', () => {
         if (potentialTypeSelect.value === 'kotak') {
             widthInputContainer.classList.remove('hidden');
@@ -25,11 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // === Event Listener untuk kalkulasi saat form disubmit ===
-    form.addEventListener('submit', (event) => {
-        event.preventDefault(); // Mencegah halaman reload
 
-        // === Ambil nilai input dan konversi ke satuan SI ===
+    form.addEventListener('submit', (event) => {
+        event.preventDefault(); 
+
+
         const E_eV = parseFloat(document.getElementById('energy').value);
         const V0_eV = parseFloat(document.getElementById('potentialHeight').value);
         
@@ -46,10 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        let R = 0, T = 0; // Inisialisasi Koefisien Refleksi (R) dan Transmisi (T)
+        let R = 0, T = 0; 
         let note = "";
 
-        // === Logika Perhitungan ===
         if (potentialTypeSelect.value === 'tangga') {
             if (E > V0) {
                 const k1 = Math.sqrt(2 * electronMass * E) / hbar;
@@ -57,12 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 R = Math.pow((k1 - k2) / (k1 + k2), 2);
                 T = (4 * k1 * k2) / Math.pow(k1 + k2, 2);
                 note = "Karena E > V₀, partikel memiliki energi cukup untuk melewati potensial, namun mekanika kuantum menunjukkan sebagian masih direfleksikan.";
-            } else { // E < V0
+            } else { 
                 R = 1;
                 T = 0;
                 note = "Karena E < V₀, partikel tidak memiliki energi cukup dan direfleksikan seluruhnya (refleksi total).";
             }
-        } else { // Potensial 'kotak'
+        } else { 
             const L_A = parseFloat(document.getElementById('barrierWidth').value);
             if (isNaN(L_A) || L_A <= 0) {
                 alert("Lebar kotak (L) harus diisi dan lebih besar dari 0.");
@@ -77,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 T = 1 / denominator;
                 R = 1 - T;
                 note = "Terjadi resonansi transmisi. Walaupun E > V₀, probabilitas transmisi bisa kurang dari 100% tergantung lebar L.";
-            } else { // E < V0 (Quantum Tunneling)
+            } else { 
                 const alpha = Math.sqrt(2 * electronMass * (V0 - E)) / hbar;
                 const denominator = 1 + (Math.pow(V0, 2) * Math.pow(Math.sinh(alpha * L), 2)) / (4 * E * (V0 - E));
                 T = 1 / denominator;
@@ -86,10 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // === Tampilkan Hasil ===
+
         reflectionResultSpan.textContent = (R * 100).toFixed(4);
         transmissionResultSpan.textContent = (T * 100).toFixed(4);
         noteP.textContent = note;
         resultsDiv.classList.remove('hidden');
     });
+
 });
