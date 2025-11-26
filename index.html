@@ -8,10 +8,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>Kalkulator Fisika Kuantum ⚛️</h1>
-        
-        <p class="teori-link">Pelajari konsep dasarnya: <a href="teori.html">Teori Fisika Kuantum</a></p>
-        
+        <h1>Kalkulator Partikel Kuantum ⚛️</h1>
+        <p>Hitung probabilitas partikel direfleksikan (R) dan ditransmisikan (T) pada potensial tangga atau kotak.</p>
+        <p class="teori-link">Ingin tahu dasarnya? Baca <a href="teori.html">Teori Fisika Kuantum</a> di sini.</p>
         <form id="calculatorForm">
             <div class="form-group">
                 <label for="potentialType">Pilih Jenis Potensial:</label>
@@ -21,21 +20,19 @@
                 </select>
             </div>
 
-            <div class="input-container">
-                <div class="form-group input-E">
-                    <label for="energy">Energi Partikel (E) dalam eV:</label>
-                    <input type="number" id="energy" step="any" required placeholder="Contoh: 5">
-                </div>
+            <div class="form-group">
+                <label for="energy">Energi Partikel (E) dalam eV:</label>
+                <input type="number" id="energy" step="any" required placeholder="Contoh: 5">
+            </div>
 
-                <div class="form-group input-V0">
-                    <label for="potentialHeight">Tinggi Potensial (V₀) dalam eV:</label>
-                    <input type="number" id="potentialHeight" step="any" required placeholder="Contoh: 10">
-                </div>
+            <div class="form-group">
+                <label for="potentialHeight">Tinggi Potensial (V₀) dalam eV:</label>
+                <input type="number" id="potentialHeight" step="any" required placeholder="Contoh: 10">
+            </div>
             
-                <div class="form-group hidden input-L" id="widthInputContainer">
-                    <label for="barrierWidth">Lebar Potensial (L) dalam Å (Angstrom):</label>
-                    <input type="number" id="barrierWidth" step="any" placeholder="Contoh: 1">
-                </div>
+            <div class="form-group hidden" id="widthInputContainer">
+                <label for="barrierWidth">Lebar Kotak (L) dalam Å (Angstrom):</label>
+                <input type="number" id="barrierWidth" step="any" placeholder="Contoh: 1">
             </div>
             
             <button type="submit">Hitung Probabilitas</button>
@@ -43,15 +40,14 @@
 
         <div id="results" class="hidden">
             <h2>Hasil Perhitungan:</h2>
-            <div id="prob-results">
-                <p><strong>Koefisien Refleksi (R):</strong> <span id="reflectionResult"></span>%</p>
-                <p><strong>Koefisien Transmisi (T):</strong> <span id="transmissionResult"></span>%</p>
-            </div>
+            <p><strong>Koefisien Refleksi (R):</strong> <span id="reflectionResult"></span>%</p>
+            <p><strong>Koefisien Transmisi (T):</strong> <span id="transmissionResult"></span>%</p>
             <p id="note" class="note"></p>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
 
