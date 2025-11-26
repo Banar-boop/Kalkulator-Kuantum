@@ -2,8 +2,16 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
+    
+    /* === GANTI BAGIAN BACKGROUND INI === */
+    background-image: url('de438bb625af669620dd2c827137fe84.jpg'); /* Pastikan path ke gambar Anda benar */
+    background-size: cover; /* Membuat gambar menutupi seluruh background */
+    background-attachment: fixed; /* Gambar tidak ikut scrolling */
+    background-position: center center; /* Memposisikan gambar di tengah */
+    background-repeat: no-repeat; /* Mencegah gambar berulang */
+    /* ================================== */
+    
+    color: #f0f0f0; /* Ubah warna teks agar kontras dengan latar belakang gelap */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,81 +20,81 @@ body {
     padding: 20px;
 }
 
+/* Pastikan container utama semi-transparan agar gambar background terlihat */
 .container {
-    background-color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.7); /* Latar belakang gelap semi-transparan */
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Bayangan yang lebih gelap */
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
+    box-sizing: border-box;
+    color: #e0e0e0; /* Warna teks lebih terang di dalam container */
 }
 
+/* Sesuaikan warna judul, tombol, dll. agar kontras dengan tema gelap */
 h1 {
-    color: #1a237e;
+    color: #b388ff; /* Warna ungu muda */
     text-align: center;
     margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); 
 }
 
-p {
-    text-align: center;
-    margin-bottom: 25px;
-    line-height: 1.6;
-}
-
-.form-group {
-    margin-bottom: 20px;
+h2 {
+    color: #9c27b0; /* Warna ungu sedang */
+    border-left: 5px solid #9c27b0;
+    padding-left: 10px;
 }
 
 label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+    color: #c5cae9; /* Warna label lebih terang */
 }
 
 input, select {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box; /* Penting agar padding tidak menambah lebar */
+    background-color: rgba(255, 255, 255, 0.1); /* Input semi-transparan */
+    border: 1px solid #7e57c2;
+    color: #e0e0e0; /* Warna teks input terang */
 }
 
 button {
-    width: 100%;
-    padding: 15px;
-    background-color: #3949ab;
+    background-color: #7e57c2; /* Warna tombol ungu */
     color: white;
     border: none;
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #1a237e;
+    background-color: #673ab7; /* Warna tombol lebih gelap saat hover */
+    transform: translateY(-2px);
 }
 
 #results {
     margin-top: 30px;
     padding: 20px;
-    background-color: #e8eaf6;
-    border-left: 5px solid #3949ab;
+    background-color: rgba(94, 53, 177, 0.7); /* Warna hasil ungu gelap semi-transparan */
+    border-left: 5px solid #7e55c2;
     border-radius: 8px;
-}
-
-#results h2 {
-    margin-top: 0;
-    color: #1a237e;
+    color: #e0e0e0;
 }
 
 .note {
-    font-style: italic;
-    color: #555;
-    font-size: 0.9em;
-    text-align: left;
+    color: #cfc2e9;
+}
+
+/* Untuk link navigasi */
+.back-link a, .teori-link a {
+    color: #b388ff; /* Link navigasi ungu muda */
+}
+
+.back-link a:hover, .teori-link a:hover {
+    color: #9c27b0;
+    text-decoration: underline;
 }
 
 .hidden {
     display: none;
+
 }
