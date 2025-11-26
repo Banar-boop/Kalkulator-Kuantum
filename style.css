@@ -1,8 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f0f2f5;
-    color: #333;
+    
+    background-image: url('de438bb625af669620dd2c827137fe84.jpg'); 
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-position: center center; 
+    background-repeat: no-repeat;
+    
+    color: #e0e0e0; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,24 +19,31 @@ body {
 }
 
 .container {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 40px; 
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(126, 87, 194, 0.5); 
+    width: 90%; 
+    max-width: 750px; 
+    box-sizing: border-box;
+    color: #e0e0e0; 
+    border: 1px solid #7e57c2; 
 }
 
 h1 {
-    color: #1a237e;
+    color: #b388ff; 
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 30px; 
+    font-size: 2.5em; 
+    text-shadow: 0 0 10px rgba(179, 136, 255, 0.5); 
 }
 
-p {
-    text-align: center;
-    margin-bottom: 25px;
-    line-height: 1.6;
+h2, h3 {
+    color: #9c27b0; 
+    border-left: 5px solid #9c27b0;
+    padding-left: 10px;
+    margin-top: 25px;
+    margin-bottom: 15px;
 }
 
 .form-group {
@@ -39,54 +53,96 @@ p {
 label {
     display: block;
     margin-bottom: 8px;
-    font-weight: bold;
+    font-weight: 500;
+    color: #c5cae9;
 }
 
 input, select {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box; /* Penting agar padding tidak menambah lebar */
+    padding: 12px 15px; 
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 1px solid #7e57c2;
+    border-radius: 10px;
+    box-sizing: border-box; 
+    color: #e0e0e0; 
+    font-size: 1.1em;
+}
+
+select option {
+    background: #1a0033; 
+    color: #e0e0e0;
 }
 
 button {
     width: 100%;
-    padding: 15px;
-    background-color: #3949ab;
+    padding: 18px; 
+    background-color: #9c27b0;
+    background-image: linear-gradient(45deg, #7e57c2, #9c27b0); 
     color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
 }
 
 button:hover {
-    background-color: #1a237e;
+    background-color: #673ab7; 
+    transform: translateY(-2px); 
 }
 
 #results {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #e8eaf6;
-    border-left: 5px solid #3949ab;
-    border-radius: 8px;
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #1a0033; 
+    border: 2px solid #b388ff; 
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(179, 136, 255, 0.7); 
+    color: #e0e0e0;
 }
 
-#results h2 {
-    margin-top: 0;
-    color: #1a237e;
+#results p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+#results strong {
+    color: #b388ff; 
+    font-weight: 700;
 }
 
 .note {
     font-style: italic;
-    color: #555;
+    color: #cfc2e9;
     font-size: 0.9em;
     text-align: left;
+    margin-top: 15px;
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
+/* Navigasi */
+.teori-link {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.teori-link a {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: #380e6c;
+    color: #b388ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.teori-link a:hover {
+    background-color: #4a148c;
+    color: #ffffff;
+}
